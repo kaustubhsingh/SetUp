@@ -35,6 +35,10 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 git config --global user.name "Kaustubh Singh"
 git config --global user.email kaustubh.singh@gmail.com
 
+# Add Heroku keys
+ssh-keygen -t rsa
+heroku keys:add
+
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
